@@ -1,0 +1,21 @@
+<!-- add_case.html -->
+{%extends 'main.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Case</title>
+</head>
+<body>
+    <h1>Add New Case</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Case</button>
+    </form>
+</body>
+</html>
+
+{% endblock %}

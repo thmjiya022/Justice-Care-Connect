@@ -1,0 +1,33 @@
+<!-- case_list.html -->
+{% extends 'main.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case List</title>
+</head>
+<body>
+    <h1>Case List</h1>
+    <ul>
+        {% for case in cases %}
+            <li>
+                <h3>Case Number: {{ case.case_number }} <br></h3>
+                <strong>Description: </strong>{{ case.description }}<br>
+                <strong>Status:</strong> {{ case.status }}<br>
+                
+                <!-- Add edit case link -->
+                <a href="{% url 'edit_case' case.id %}">Edit Case</a><br>
+                
+                <!-- Add more fields as needed -->
+                <br>
+                <a href="{% url 'case_detail' case.id %}">View Details</a>
+            </li>
+            <br> <!-- Add a space after each case -->
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!-- edit_case.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Case</title>
+</head>
+<body>
+    <h1>Edit Case</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Case</button>
+    </form>
+</body>
+</html>

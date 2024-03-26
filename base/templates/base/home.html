@@ -1,0 +1,13 @@
+{% extends 'main.html'%}
+
+{% block content%}
+
+<h1>Welcome to the Police Station</h1>
+<!-- Display Most Wanted, Priority Cases, Recent Cases, etc. -->
+
+<!-- Add link to add a new case -->
+<a href="{% url 'add_case' %}">Add New Case</a>
+
+<a href="{% url 'case_list' %}">View All Cases</a>
+
+{% endblock %}

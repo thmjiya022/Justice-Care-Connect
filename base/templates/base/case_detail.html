@@ -1,0 +1,22 @@
+<!-- base/case_detail.html -->
+{% extends 'main.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Detail</title>
+</head>
+<body>
+    <h1>Case Detail</h1>
+    <p><strong>Case Number:</strong> {{ case.case_number }}</p>
+    <p><strong>Description:</strong> {{ case.description }}</p>
+    <p><strong>Status:</strong> {{ case.status }}</p>
+    <p><strong>Created At:</strong> {{ case.created_at }}</p>
+    <p><strong>Updated At:</strong> {{ case.updated_at }}</p>
+    <!-- Add more fields as needed -->
+</body>
+</html>
+
+{% endblock %}

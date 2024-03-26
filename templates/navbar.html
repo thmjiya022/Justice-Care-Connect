@@ -1,0 +1,25 @@
+{% load static %}
+
+
+<header class="header header--loggedIn">
+  <div class="container">
+
+   
+      <a href="{% url 'home' %}" class="header__logo">
+        <img src="{% static 'images/logo.png' %}" />
+        <h1>SOUTH AFRICAN POLICE SERVICE</h1>
+      </a>
+
+      <nav class="header_menu">
+   
+        <a href="{% url 'login' %}"  class="header__user">
+          <img src="{% static 'images/avatar.svg' %}" />
+          <p>Login</p>
+        </a>
+      </nav>
+
+  </div>
+  
+</header>
+
+<hr>
