@@ -1,13 +1,16 @@
-{% extends 'main.html'%}
+{% extends 'main.html' %}
 
-{% block content%}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Welcome to the Police Station</h1>
 
-<h1>Welcome to the Police Station</h1>
-<!-- Display Most Wanted, Priority Cases, Recent Cases, etc. -->
+    <!-- Display Most Wanted, Priority Cases, Recent Cases, etc. -->
 
-<!-- Add link to add a new case -->
-<a href="{% url 'add_case' %}">Add New Case</a>
 
-<a href="{% url 'case_list' %}">View All Cases</a>
-
+    <!-- Links to add and view cases -->
+    <div class="mt-4 text-center">
+        <a href="{% url 'add_case' %}" class="btn btn-success btn-lg mx-3">Add New Case</a>
+        <a href="{% url 'case_list' %}" class="btn btn-info btn-lg mx-3">View All Cases</a>
+    </div>
+</div>
 {% endblock %}
