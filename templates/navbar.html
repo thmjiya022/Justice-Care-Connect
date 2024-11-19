@@ -1,25 +1,22 @@
 {% load static %}
 
-
 <header class="header header--loggedIn">
-  <div class="container">
-
-   
-      <a href="{% url 'home' %}" class="header__logo">
-        <img src="{% static 'images/logo.png' %}" />
-        <h1>SOUTH AFRICAN POLICE SERVICE</h1>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- Logo -->
+      <a href="{% url 'home' %}" class="navbar-brand">
+        <img src="{% static 'images/logo.png' %}" alt="SAP logo" style="height: 40px;"/>
+        <h1 class="d-inline-block text-white">SOUTH AFRICAN POLICE SERVICE</h1>
       </a>
 
-      <nav class="header_menu">
-   
-        <a href="{% url 'login' %}"  class="header__user">
-          <img src="{% static 'images/avatar.svg' %}" />
-          <p>Login</p>
+      <!-- Login Section -->
+      <div class="ml-auto">
+        <a href="{% url 'login' %}" class="navbar-text text-white">
+          <img src="{% static 'images/avatar.svg' %}" alt="User Avatar" style="height: 30px;"/>
+          <span>Login</span>
         </a>
-      </nav>
-
+      </div>
+    </nav>
   </div>
-  
 </header>
-
 <hr>
