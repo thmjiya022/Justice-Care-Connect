@@ -81,7 +81,6 @@ def add_case(request):
     return render(request, 'base/add_case.html', {'form': form})
 
 
-
 def edit_case(request, case_id):
     case = Case.objects.get(id=case_id)
     if request.method == 'POST':
@@ -92,3 +91,8 @@ def edit_case(request, case_id):
     else:
         form = CaseForm(instance=case)
     return render(request, 'base/edit_case.html', {'form': form})
+
+@login_required
+def logout_user(request):
+    logout(request)
+    return redirect('home')

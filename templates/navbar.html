@@ -9,12 +9,20 @@
         <h1 class="d-inline-block text-white">SOUTH AFRICAN POLICE SERVICE</h1>
       </a>
 
-      <!-- Login Section -->
+      <!-- Login/Logout Section -->
       <div class="ml-auto">
+        {%if user.is_authenticated%}
+          <a href="{% url 'logout' %}" class="navbar-text text-white">
+            <img src="{% static 'images/avatar.svg' %}" alt="User Avatar" style="height: 30px;"/>
+            <span>Logout</span>
+          </a>
+        {% else %}
+
         <a href="{% url 'login' %}" class="navbar-text text-white">
           <img src="{% static 'images/avatar.svg' %}" alt="User Avatar" style="height: 30px;"/>
           <span>Login</span>
         </a>
+        {% endif %}
       </div>
     </nav>
   </div>
